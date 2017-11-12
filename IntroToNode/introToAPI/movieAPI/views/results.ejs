@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>results</title>
+</head>
+<body>
+	<a href="/">Home</a>
+	<h2>Result page</h2>
+	<% parsedMoiveInfo["Search"].forEach(function(movie){ %>
+		<li> Title : <%= movie.Title %>
+			<ul>Year : <%= movie.Year %></ul>
+			<img src="<%= movie.Poster %>">
+		</li>
+	<% }); %>
+</body>
+</html>
