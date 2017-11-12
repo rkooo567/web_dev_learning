@@ -6,6 +6,11 @@
 var express = require('express');
 var app = express();
 
+// serve the directory public
+app.use(express.static("public"));
+// ejs can be skipped when specifying the file path.
+app.set("view engine", "ejs");
+
 // utility function
 function logMessage(msg){
 	console.log(msg + " is requested");
@@ -14,13 +19,13 @@ function logMessage(msg){
 /* route */
 app.get("/", function(req, res){
 	logMessage("/");
-	res.render("home.ejs")
+	res.render("home")
 });
 
 app.get("/fallInLoveWith/:thing", function(req, res){
 	var thing = req.params.thing;
 	logMessage("/fallInLoveWith/" + thing);
-	res.render("love.ejs", {thingVar: thing});
+	res.render("love", {thingVar: thing});
 });
 
 app.get("/posts", function(req, res){
@@ -31,7 +36,7 @@ app.get("/posts", function(req, res){
 		{title: "Lord of the ring", author: "Taku"}
 	];
 
-	res.render("posts.ejs", {posts: posts});
+	res.render("posts", {posts: posts});
 });
 
 /* server */
