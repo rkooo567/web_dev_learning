@@ -1,0 +1,11 @@
+All the cat: 
+[ { _id: 5a11dc4a124906027062a627,
+    name: 'George',
+    age: 11,
+    temperament: 'Grouchy',
+    __v: 0 },
+  { _id: 5a11dccbbc472a1f4c7438b0,
+    name: 'Mrs.Norris',
+    age: 7,
+    temperament: 'evil',
+    __v: 0 } ]
