@@ -1,0 +1,25 @@
+i.icon {
+	font-size: 2em;
+}
+
+.container.main {
+	margin-top: 7.0em;
+}
+
+#delete {
+	display: inline;
+}
+
+#arrow-icon {
+	font-size: 1em;
+}
+
+#index-item-image {
+	height: 150px;
+	width: 150px;
+}
+
+#show-image {
+	height: 400px;
+	width: 350px;
+}
